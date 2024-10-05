@@ -16,3 +16,8 @@ uci commit network
 uci -q delete network.globals.ula_prefix
 uci commit network
 /etc/init.d/network restart
+
+# must login on tty
+uci set system.@system[0].ttylogin="1"
+uci commit system
+service system restart
