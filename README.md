@@ -1,5 +1,7 @@
 # Ghost 'em WRT 👻
 
+![Ghost 'em WRT Report Image](repo-image.png?raw=true "Repo Image")
+
 ## Basic Requirements
 - computer with ethernet port
 - ethernet cable
