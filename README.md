@@ -1,4 +1,4 @@
-# Ghost 'em WRT 👻
+# Ghost 'Em WRT 👻
 
 ![Ghost 'em WRT Report Image](repo-image.png?raw=true "Repo Image")
 
@@ -21,29 +21,23 @@
 - **change the password with the provided command**.
 - now, when connecting your computer via ethernet to the pi, you should be able to ssh into your router.
 
-  you@your-pc:~ ssh root@192.168.1.1
-  
-  root@192.168.1.1's password: ENTER_PASSWORD_HERE
+      you@your-pc:~ ssh root@192.168.1.1
+      root@192.168.1.1's password: ENTER_PASSWORD_HERE
 
 - if you plug a keyboard into your Pi, you'll notice you didn't need to log in to the TTY terminal. We can ammend that with:
 
-  you@your-pc:~ uci set system.@system[0].ttylogin="1"
-  
-  you@your-pc:~ uci commit system
-  
-  you@your-pc:~ service system restart
+      you@your-pc:~ uci set system.@system[0].ttylogin="1"
+      you@your-pc:~ uci commit system
+      you@your-pc:~ service system restart
 
 # OpenWRT Configuration
 
 ## Run Bash Script
 
-   git clone https://github.com/harryjwright/ghost-em-wrt/
-   
-   cd ghost-em-wrt
-
-   chmod +x install.sh
-
-   ./install.sh
+    git clone https://github.com/harryjwright/ghost-em-wrt/
+    cd ghost-em-wrt
+    chmod +x install.sh
+    ./install.sh
 
 ## Additional tools for learning
 
