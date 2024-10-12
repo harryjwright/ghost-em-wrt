@@ -61,15 +61,22 @@
 
 ### nlbwmon
 
+**Object busy**
+
     daemon.err nlbwmon[1532]: Netlink receive failure: Object busy
     daemon.err nlbwmon[1532]: Unable to dump conntrack: I/O error
 
-This error was supposed to be resolved by doubling the memory
+**Out of memory**
+
+    daemon.err nlbwmon[1533]: Netlink receive failure: Out of memory
+    daemon.err nlbwmon[1533]: Unable to dump conntrack: No buffer space available
 
 ### openvpn
+
+**Inconsistence**
 
     daemon.warn openvpn(YOUR_VPN_NAME)[2517]: WARNING: `link-mtu' is used inconsistently, local=`VALUE', remote=`VALUE'
     daemon.warn openvpn(YOUR_VPN_NAME)[2517]: WARNING: `auth' is used inconsistently, local=`VALUE', remote=`VALUE'
     daemon.warn openvpn(YOUR_VPN_NAME)[2517]: WARNING: `keysize' is used inconsistently, local=`VALUE', remote=`VALUE'
 
-This error is *supposedly* related to the OpenVPN version used in OpenWRT's stable branch. When OpenWRT upgrades to the next main version, this *should* be resolved.
+This warning is *supposedly* related to the OpenVPN version used in OpenWRT's stable branch. When OpenWRT upgrades to the next main version, this *should* be resolved. As stated in the log, this is only a warning.
