@@ -32,6 +32,10 @@
 
 # OpenWRT Configuration
 
+## Log to Screen
+
+The screen you are looking at if you have connected a screen is the TTY terminal. If you want to display errors and warning on this screen to monitor what's going on behind-the scenes, navigate to `System > System > Logging` and write to the log file `/dev/tty0`.
+
 ## Run Bash Script
 
     git clone https://github.com/harryjwright/ghost-em-wrt/
@@ -67,6 +71,10 @@
 
 ### openvpn
 
+**Reply warning**
+
+    daemon.err openvpn(YOUR_VPN_NAME)[2515]: AEAD Decrypt error: bad packet ID (may be a replay): [ #17027 ] -- see the man page entry for --no-replay and --replay-window for more info or silence this warning with --mute-replay-warnings
+    
 **Inconsistence**
 
     daemon.warn openvpn(YOUR_VPN_NAME)[2517]: WARNING: `link-mtu' is used inconsistently, local=`VALUE', remote=`VALUE'
