@@ -82,3 +82,7 @@ The screen you are looking at if you have connected a screen is the TTY terminal
     daemon.warn openvpn(YOUR_VPN_NAME)[2517]: WARNING: `keysize' is used inconsistently, local=`VALUE', remote=`VALUE'
 
 This warning is *supposedly* related to the OpenVPN version used in OpenWRT's stable branch. When OpenWRT upgrades to the next main version, this *should* be resolved. As stated in the log, this is only a warning.
+
+## Tests
+
+[DNS Leak Test](https://www.dnsleaktest.com/)
