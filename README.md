@@ -29,12 +29,15 @@
 
 - if you plug a keyboard into your Pi, you'll notice you didn't need to log in to the TTY terminal. We can ammend that with:
 
-      you@your-pc:~ uci set system.@system[0].ttylogin="1"
-      you@your-pc:~ uci commit system
-      you@your-pc:~ service system restart
+      root@OpenWrt:~# uci set system.@system[0].ttylogin="1"
+      root@OpenWrt:~# uci commit system
+      root@OpenWrt:~# service system restart
 
 - on your laptop navigate to [luci](https://192.168.1.1/cgi-bin/luci/) and log in
 - go to the [wireless section](https://192.168.1.1/cgi-bin/luci/admin/network/wireless) and connect to the network you want to intermediary (use a randomised mac and make sure to set your country code)
+- update the package manager (opkg)
+
+      root@OpenWrt:~# opkg update
 
 # OpenWRT Configuration
 
