@@ -33,8 +33,8 @@
       you@your-pc:~ uci commit system
       you@your-pc:~ service system restart
 
-  - on your laptop navigate to [luci](https://192.168.1.1/cgi-bin/luci/) and log in
-  - go to the [wireless section](https://192.168.1.1/cgi-bin/luci/admin/network/wireless) and connect to the network you want to intermediary (use a randomised mac and make sure to set your country code)
+- on your laptop navigate to [luci](https://192.168.1.1/cgi-bin/luci/) and log in
+- go to the [wireless section](https://192.168.1.1/cgi-bin/luci/admin/network/wireless) and connect to the network you want to intermediary (use a randomised mac and make sure to set your country code)
 
 # OpenWRT Configuration
 
