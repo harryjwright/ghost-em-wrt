@@ -18,17 +18,23 @@
 - go to [OpenWRT Firmware Selector](https://firmware-selector.openwrt.org) and download the Factory (EXT4) version for your device.
 - flash the image to an sd card. [Balena Etcher is a good flashing tool](https://etcher.balena.io/).
 - insert the sd card into the pi and boot.
-- **change the password with the provided command**.
 - now, when connecting your computer via ethernet to the pi, you should be able to ssh into your router.
 
       you@your-pc:~ ssh root@192.168.1.1
       root@192.168.1.1's password: ENTER_PASSWORD_HERE
+
+- change the password
+
+      root@OpenWrt:~# passwd
 
 - if you plug a keyboard into your Pi, you'll notice you didn't need to log in to the TTY terminal. We can ammend that with:
 
       you@your-pc:~ uci set system.@system[0].ttylogin="1"
       you@your-pc:~ uci commit system
       you@your-pc:~ service system restart
+
+  - on your laptop navigate to [luci](https://192.168.1.1/cgi-bin/luci/) and log in
+  - go to the [wireless section](https://192.168.1.1/cgi-bin/luci/admin/network/wireless) and connect to the network you want to intermediary (use a randomised mac and make sure to set your country code)
 
 # OpenWRT Configuration
 
