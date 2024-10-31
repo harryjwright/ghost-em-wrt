@@ -12,6 +12,9 @@ uci set system.@system[0].ttylogin="1"
 uci commit system
 service system restart
 
+# update package manager
+opkg update
+
 # disable ipv6 https://3os.org/infrastructure/openwrt/disable-ipv6/
 uci set 'network.lan.ipv6=0'
 uci set 'network.wan.ipv6=0'
