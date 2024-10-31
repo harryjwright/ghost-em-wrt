@@ -41,6 +41,15 @@
 
 # OpenWRT Configuration
 
+## Screen Rotation
+
+When I use the Official 7" screen inside my designated case, the screen is upside-down. To ammend this
+
+    root@OpenWrt:~# cd /boot
+    root@OpenWrt:/boot# vi config.txt
+
+In vi, you can change to insert mode by pressing `i`. In the configuration, adding `lcd_rotate=2` will rotate it two times ninety degrees (180 degrees). Then write and quit (`:wq!`) and reboot (`reboot`).
+
 ## Log to Screen
 
 The screen you are looking at if you have connected a screen is the TTY terminal. If you want to display errors and warning on this screen to monitor what's going on behind-the scenes, navigate to `System > System > Logging` and write to the log file `/dev/tty0`.
